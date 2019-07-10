@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -15,21 +17,21 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`,
+        path: path.resolve(`${__dirname}/src/pages`),
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/src/blog`,
+        path: path.resolve(`${__dirname}/src/blog`),
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/src/chunks`,
+        path: path.resolve(`${__dirname}/src/chunks`),
       },
     },
     {
@@ -62,7 +64,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `navs`,
-        path: `${__dirname}/src/navs`,
+        path: path.resolve(`${__dirname}/src/navs`),
       },
     },
   ],
